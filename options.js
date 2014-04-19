@@ -1,21 +1,45 @@
-$(function(){
-  var pattern, color, opacity;
-  chrome.storage.local.get(["pattern", "color", "opacity"], function(items){
-    $('#pattern').val(items.pattern);
-    $('#color').val(items.color);
-    $('#opacity').val(items.opacity);
-  });
+window.onload = function() {
+  var fields = ['pattern', 'case_insensitive', 'color', 'opacity'];
+  var config = {};
 
-  $('#save').click(function(e){
-    pattern = $('#pattern').val();
-    color = $('#color').val();
-    opacity = $('#opacity').val();
-
-    chrome.storage.local.set({"pattern": pattern, "color": color, "opacity": opacity}, function(){
-      $('#saved').show();
-      setTimeout(function(){
-        $('#saved').fadeOut();
-      }, 500);
+  // load config from chrome local storage
+  chrome.storage.local.get(fields, function(items) {
+    fields.forEach(function(field) {
+      var elem = document.getElementById(field);
+      if (elem) {
+        switch(elem.type) {
+         case 'text':
+          elem.value = items[field];
+          break;
+         case 'checkbox':
+          elem.checked = !!items[field];
+          break;
+        }
+      }
     });
   });
-});
+
+  var form = document.getElementById('form');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    fields.forEach(function(field) {
+      var elem = document.getElementById(field);
+      if (elem) {
+        switch(elem.type) {
+         case 'text':
+          config[field] = elem.value;
+          break;
+         case 'checkbox':
+          config[field] = elem.checked;
+          break;
+        }
+      }
+    });
+
+    // save config to chrome local storage
+    chrome.storage.local.set(config, function() {
+      alert('saved!');
+    });
+  });
+};

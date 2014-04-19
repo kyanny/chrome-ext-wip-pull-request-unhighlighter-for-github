@@ -11,22 +11,27 @@
   <script src="jquery-2.1.0.min.js"></script>
   <script src="options.js"></script>
   <body>
-    <div>
-      <span>Pattern</span>
-      <input type="text" id="pattern" value="WIP" size="100" />
-      <span>(default: WIP)</span>
-    </div>
-    <div>
-      <span>Background Color</span>
-      <input type="text" id="color" value="lightgray" />
-      <span>(default: lightgray)</span>
-    </div>
-    <div>
-      <span>Background Color</span>
-      <input type="text" id="opacity" value="0.7" />
-      <span>(default: 0.7)</span>
-    </div>
-    <button id="save">Save</button>
-    <span id="saved">Saved!</span>
+    <form id="form">
+      <div>
+        <span>Pattern</span>
+        <input type="text" id="pattern" value="WIP" size="100" />
+        <span>(default: WIP)</span>
+        <span>Enable Case Insensitive Match</span>
+        <input type="checkbox" id="case_insensitive" />
+      </div>
+      <div>
+        <span>Background Color</span>
+        <input type="text" id="color" value="lightgray" />
+        <span>(default: lightgray)</span>
+      </div>
+      <div>
+        <span>Background Color</span>
+        <input type="text" id="opacity" value="0.7" />
+        <span>(default: 0.7)</span>
+      </div>
+      <input type="submit" value="Save" />
+
+      <span id="saved">Saved!</span>
+    </form>
   </body>
 </html>
