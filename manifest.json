@@ -10,9 +10,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://github.com/dashboard/pulls*",
-        "https://github.com/orgs/*/pulls*",
-        "https://github.com/*/*/pulls*"
+        "https://github.com/*/pulls"
       ],
       "js": [
         "jquery-2.1.0.min.js",
