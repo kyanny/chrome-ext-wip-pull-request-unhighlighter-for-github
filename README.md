@@ -8,11 +8,19 @@ Unhighlignt WIP, DO NOT MERGE pull requests on GitHub.
 Configuration
 -------------
 
-You can customize "Matching Pattern", "Case Insensitive Flag", "Unhighlignt Color" and "Opacity" at "Options" page.
+You can customize
+
+* Matching Pattern
+* Case Insensitive flag
+* Unhighlignt color
+* Opacity
+
+at Options page.
 
 ![config](https://cloud.githubusercontent.com/assets/10515/2748994/2aa0a674-c7e5-11e3-855d-e6dfc1988993.png)
 
-## LICENSE
+LICENSE
+-------
 
 MIT License
 
