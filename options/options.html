@@ -1,36 +1,29 @@
+<!doctype html>
 <html>
-  <style>
-    body {
-    font-size: 30px;
-    }
-    span#saved {
-    display: none;
-    color: green;
-    }
-  </style>
-  <script src="options.js"></script>
+  <head>
+    <title>Configuration</title>
+    <script src="options.js"></script>
+  </head>
   <body>
+    <h1>Configuration</h1>
     <form id="form">
       <div>
-        <span>Pattern</span>
-        <input type="text" id="pattern" value="WIP" size="100" />
-        <span>(default: WIP)</span>
-        <span>Enable Case Insensitive Match</span>
+        <h2>Matching Pattern</h2>
+        <input type="text" id="pattern" value="WIP" size="60" />
         <input type="checkbox" id="case_insensitive" />
+        <label for="case_insensitive">Enable Case Insensitive Match</label>
       </div>
       <div>
-        <span>Background Color</span>
-        <input type="text" id="color" value="lightgray" />
-        <span>(default: lightgray)</span>
+        <h2>Background Color</h2>
+        <input type="color" id="color" value="#d3d3d3" /><!-- lightgray -->
       </div>
       <div>
-        <span>Background Color</span>
-        <input type="text" id="opacity" value="0.7" />
-        <span>(default: 0.7)</span>
+        <h2>Opacity</h2>
+        <input type="number" id="opacity" value="0.7" max="1.0" min="0" step="0.1" />
       </div>
-      <input type="submit" value="Save" />
 
-      <span id="saved">Saved!</span>
+      <input type="submit" value="Save" />
+      <input type="reset" value="Reset" />
     </form>
   </body>
 </html>

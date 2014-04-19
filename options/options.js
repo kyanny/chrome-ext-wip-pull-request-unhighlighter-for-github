@@ -8,11 +8,11 @@ window.onload = function() {
       var elem = document.getElementById(field);
       if (elem) {
         switch(elem.type) {
-         case 'text':
-          elem.value = items[field];
-          break;
          case 'checkbox':
           elem.checked = !!items[field];
+          break;
+        default:
+          elem.value = items[field];
           break;
         }
       }
@@ -27,11 +27,11 @@ window.onload = function() {
       var elem = document.getElementById(field);
       if (elem) {
         switch(elem.type) {
-         case 'text':
-          config[field] = elem.value;
-          break;
          case 'checkbox':
           config[field] = elem.checked;
+          break;
+        default:
+          config[field] = elem.value;
           break;
         }
       }
@@ -39,7 +39,7 @@ window.onload = function() {
 
     // save config to chrome local storage
     chrome.storage.local.set(config, function() {
-      alert('saved!');
+      alert('Configurations are saved successfully.');
     });
   });
 };
