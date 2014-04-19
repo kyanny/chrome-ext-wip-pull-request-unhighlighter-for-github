@@ -11,8 +11,8 @@ Configuration
 You can customize
 
 * Matching Pattern
-* Case Insensitive flag
-* Unhighlignt color
+* Case Insensitive Flag
+* Unhighlignt Color
 * Opacity
 
 at Options page.
