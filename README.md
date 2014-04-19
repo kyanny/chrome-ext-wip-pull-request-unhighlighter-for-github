@@ -17,7 +17,8 @@ You can customize
 
 at Options page.
 
-![config](https://cloud.githubusercontent.com/assets/10515/2748994/2aa0a674-c7e5-11e3-855d-e6dfc1988993.png)
+![screen shot 2014-04-20 at 2 15 00 am](https://cloud.githubusercontent.com/assets/10515/2749030/9e6ee920-c7e6-11e3-90ea-36debb795511.png)
+![screen shot 2014-04-20 at 2 17 23 am](https://cloud.githubusercontent.com/assets/10515/2749031/a2f6187e-c7e6-11e3-834a-989144b3cc55.png)
 
 LICENSE
 -------
