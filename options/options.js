@@ -12,7 +12,9 @@ window.onload = function() {
           elem.checked = !!items[field];
           break;
         default:
-          elem.value = items[field];
+          if (items[field]) {
+            elem.value = items[field];
+          }
           break;
         }
       }
