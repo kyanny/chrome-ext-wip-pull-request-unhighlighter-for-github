@@ -6,7 +6,7 @@ chrome.storage.local.get(['pattern', 'case_insensitive', 'color', 'opacity'], fu
   if (!pattern) {
     pattern = 'WIP';
   }
-  
+
   case_insensitive = !!items.case_insensitive;
   if (case_insensitive) {
     flags = 'i';
@@ -20,7 +20,7 @@ chrome.storage.local.get(['pattern', 'case_insensitive', 'color', 'opacity'], fu
   opacity = items.opacity || 0.7;
 
   var unhighlighter = function(element, re, color, opacity) {
-    if (element.querySelector('.issue-title-link').innerText.match(re)) {
+    if (element.querySelector('.list-group-item-name, .issue-title-link').innerText.match(re)) {
       element.style.backgroundColor = color;
       element.style.opacity = opacity;
     }
@@ -35,7 +35,7 @@ chrome.storage.local.get(['pattern', 'case_insensitive', 'color', 'opacity'], fu
   var observer = new MutationObserver(function(mutations, self) {
     mutations.forEach(function(mutation) {
       if (mutation.type === 'childList') {
-        var elements = document.querySelectorAll('ul.table-list-issues li.table-list-item');
+        var elements = document.querySelectorAll('.pulls-list-group li.list-group-item, ul.table-list-issues li.table-list-item');
 
         Array.prototype.forEach.call(elements, function(element) {
           unhighlighter(element, re, color, opacity);
