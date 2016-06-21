@@ -21,17 +21,17 @@ chrome.storage.local.get(['pattern', 'case_insensitive', 'color', 'opacity'], fu
 
   var unhighlighter = function(element, re, color, opacity) {
     var items = element.querySelectorAll('.Box-row-link');
-    Array.prototype.filter.call(items, function(item) {
+    Array.from(items).filter(function(item) {
       if (item.innerText.match(re)) {
         element.style.backgroundColor = color;
         element.style.opacity = opacity;
       }
-    })
+    });
   };
 
   var walk = function(re, color, opacity) {
     var elements = document.querySelectorAll('.js-issue-row');
-    Array.prototype.forEach.call(elements, function(element) {
+    Array.from(elements).forEach(function(element) {
       unhighlighter(element, re, color, opacity);
     });
   }
