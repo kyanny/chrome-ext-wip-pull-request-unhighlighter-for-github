@@ -20,7 +20,7 @@ chrome.storage.local.get(['pattern', 'case_insensitive', 'color', 'opacity'], fu
   opacity = items.opacity || 0.7;
 
   var unhighlighter = function(element, re, color, opacity) {
-    var items = element.querySelectorAll('.list-group-item-name, .issue-title-link');
+    var items = element.querySelectorAll('.Box-row-link');
     Array.prototype.filter.call(items, function(item) {
       if (item.innerText.match(re)) {
         element.style.backgroundColor = color;
@@ -30,7 +30,7 @@ chrome.storage.local.get(['pattern', 'case_insensitive', 'color', 'opacity'], fu
   };
 
   var walk = function(re, color, opacity) {
-    var elements = document.querySelectorAll('.pulls-list-group li.list-group-item, ul.table-list-issues li.table-list-item');
+    var elements = document.querySelectorAll('.js-issue-row');
     Array.prototype.forEach.call(elements, function(element) {
       unhighlighter(element, re, color, opacity);
     });
