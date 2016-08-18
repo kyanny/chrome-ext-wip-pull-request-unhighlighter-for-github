@@ -1,6 +1,10 @@
 WIP Pull Request Unhighlignter for GitHub
 =========================================
 
+<a href="https://chrome.google.com/webstore/detail/wip-pull-request-unhighli/plebohahijhmebohbcifnaccfkjdgppe" target="_blank">
+<img src="https://developer.chrome.com/webstore/images/ChromeWebStore_Badge_v2_206x58.png">
+</a>
+
 Unhighlignt WIP, DO NOT MERGE pull requests on GitHub.
 
 ![screen shot 2014-04-14 at 3 59 19 pm](https://cloud.githubusercontent.com/assets/10515/2695092/fa4c9884-c3cf-11e3-9437-3b0b93a56854.png)
