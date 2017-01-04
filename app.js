@@ -20,7 +20,7 @@ chrome.storage.local.get(['pattern', 'case_insensitive', 'color', 'opacity'], fu
   opacity = items.opacity || 0.7;
 
   var unhighlighter = function(element, re, color, opacity) {
-    var items = element.querySelectorAll('.Box-row-link');
+    var items = element.querySelectorAll('.Box-row--drag-hide');
     Array.from(items).filter(function(item) {
       if (item.innerText.match(re)) {
         element.style.backgroundColor = color;
